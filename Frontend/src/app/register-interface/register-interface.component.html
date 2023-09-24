@@ -1,0 +1,44 @@
+
+
+ 
+ <div class="bg-img">
+    <div class="content">
+       <header class="text-dark">Sign Up</header>
+       <form [formGroup]="registrationForm" (ngSubmit)="verifydata()" >
+
+          <div class="field">
+             <span class="fa fa-user"></span>
+             <input type="text" matInput placeholder="User Name" formControlName="customerName">
+          </div>
+          <div class="field space">
+            <span class="fa fa-user"></span>
+            <input type="email" matInput placeholder="Email" formControlName="email">
+            
+         </div>
+         <mat-error *ngIf="registrationForm.controls['email'].hasError('email')">Email Format is incorrect please check again !</mat-error>
+         
+          <div class="field space">
+             <span class="fa fa-lock"></span>
+             <input type="password" class="pass-key" required placeholder="Password" formControlName="password">
+             <!-- <span class="show">SHOW</span> -->
+          </div>
+          <mat-error *ngIf="registrationForm.controls['password'].hasError('pattern')">Password pattern is incorrect please check again !</mat-error>
+          <div class="field space">
+            <span class="fa fa-user"></span>
+            <input type="text" matInput placeholder="Phone Number" formControlName="mobileNo">
+         </div>
+         <mat-error *ngIf="registrationForm.controls['mobileNo'].hasError('pattern')">Phone No. pattern is incorrect please check again !</mat-error>
+      
+          <div class="field">
+            <input type="submit" class="btn btn-danger" value="Submit" [disabled]="!registrationForm.valid" > 
+             <!-- <input type="submit" value="REGISTER"> -->
+          </div>
+       </form>
+       <div class="signup">
+        <span class="text-dark"> Wan't to go back?</span>
+         <a href="" style="border: 1px solid gray; border-radius: 10px;"> Home </a>
+      </div>
+    </div>
+ </div>
+
+

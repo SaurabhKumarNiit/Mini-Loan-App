@@ -1,0 +1,124 @@
+.banner
+{
+    background-image: url('https://images.moneycontrol.com/static-mcnews/2022/09/Home-Loan-1.png');
+    height:800px;
+    background-position: center top;
+    background-size: cover;
+    animation: slider 15s infinite alternate-reverse;
+}
+@keyframes slider{
+    0%{
+        background-image: url('https://monomousumi.com/wp-content/uploads/HOME-LOAN-1-1.jpg');
+    }
+    35%{
+        background-image: url('https://omconsultancy.net/wp-content/uploads/2020/02/LoanAgaintsPropertyBanner2.jpg');
+    }
+    75%{
+        background-image: url('https://files.cholamandalam.com/mobile_view_20_14_8e1df86d47.webp');
+    }
+    65%{
+        background-image: url('https://dazeinfo.com/wp-content/uploads/2022/07/loan-personal.jpeg');
+    }
+    
+}
+.content
+{
+    height: 500px;
+    top: 30%;
+    left: 20%;
+    /* position: absolute; */
+}
+.content h3
+{
+    margin-top: 20px;
+    color:whitesmoke;
+    font-size: 35px;
+    font-weight: bold;
+  
+}
+.content a 
+{
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.content a:hover 
+{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.stepBox 
+{
+    background-color: #000;
+    padding: 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.stepBox h1 
+{
+    font-size: 50px;
+    font-weight: bold;
+    color:var(--primary-color);
+}
+.stepBox p 
+{
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+}
+.highlight
+{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.foodbox 
+{
+    padding: 10px 5px;
+} 
+.foodbox img
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.foodbox h1 
+{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.viewmorebtn
+{
+    text-decoration: none;
+    background-color:var(--primary-color);
+    color: #000;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    
+}
+
+@media screen and (max-width:600px)
+{
+    .banner
+{
+    height: 700px;
+}
+}
+
+#item{
+    text-decoration: none;
+    color:black
+}
+img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+} 

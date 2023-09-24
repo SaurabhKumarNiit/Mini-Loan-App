@@ -1,0 +1,92 @@
+<div id="wrapper">
+  <div id="page-content-wrapper">
+    <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4"
+    >
+      <div class="d-flex align-items-center">
+        <i
+          class="fas fa-align-left primary-text fs-4 me-3"
+          id="menu-toggle"
+        ></i>
+        <h2 class="fs-2 m-0">Admin-Dashboard</h2>
+      </div>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <ul>
+              <li>
+                <button style="border-radius: 35px" (click)="logOut()">
+                  <mat-icon>logout</mat-icon>
+                  Log Out
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+
+    <div class="container-fluid px-4">
+      <br /><br /><br />
+      <div id="data" class="row my-4">
+        <h2 class="fs-4 mb-3">All Customers who Applied For Loan</h2>
+        <div class="col">
+          <table class="table bg-white rounded shadow-sm table-hover rounded">
+            <thead>
+              <tr>
+                <th scope="col" width="50">#</th>
+                <th scope="col">Email</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Loan Amount</th>
+                <th scope="col">Current Status</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of loanData; let i = index" id="data">
+                <th scope="row">{{ i + 1 }}.</th>
+                <td>
+                  <strong>{{ data.email }}</strong>
+                </td>
+                <td>
+                  <strong>{{ data.customerName }}</strong>
+                </td>
+                <td>
+                  <strong>{{ data.amount }}</strong>
+                </td>
+                <td>
+                  <strong>{{ data.status }}</strong>
+                </td>
+                <td>
+                  <a routerLink="{{ data.email }}">
+                    <button mat-raised-button style="border-radius: 35px">
+                      Change Status
+                    </button>
+                  </a>
+                </td>
+
+                <br />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

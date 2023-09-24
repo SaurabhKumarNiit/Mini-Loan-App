@@ -1,0 +1,83 @@
+<mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+<div class="navigation">
+  <div>
+    <h1>
+      <a style="text-decoration: none; color: gray" href="/admin">
+        <img
+          src="assets\admin-image\infographic.gif"
+          height="60px"
+          width="70px"
+          alt=""
+        />
+        Admin-Dashboard</a
+      >
+    </h1>
+  </div>
+</div>
+<mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+
+<div class="container">
+  <div class="row">
+    <div class="display">
+      <form action="" class="form">
+        <div class="input-box">
+          <label>Customer Name</label>
+          <input
+            matInput
+            [(ngModel)]="loanData.customerName"
+            name="customerName"
+            type="text"
+          />
+        </div>
+
+        <div class="input-box">
+          <label>Loan Amount</label>
+          <input
+            matInput
+            [(ngModel)]="loanData.amount"
+            name="amount"
+            type="text"
+          />
+        </div>
+
+        <div>
+          <div class="input-box">
+            <label>Loan Term in Years</label>
+            <input
+              matInput
+              [(ngModel)]="loanData.term"
+              name="term"
+              type="number"
+            />
+          </div>
+        </div>
+
+        <div>
+          <div class="input-box">
+            <label>Current Status</label>
+            <input
+              matInput
+              [(ngModel)]="loanData.status"
+              name="status"
+              type="text"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <br /><br /><br />
+
+    <div id="buttonPosition">
+      <button (click)="removeData()" mat-fab extended class="bg-danger">
+        <mat-icon>delete</mat-icon>
+        Reject Loan
+      </button>
+
+      <button (click)="updateData()" mat-fab extended class="bg-success">
+        <mat-icon>update</mat-icon>
+        Approve Loan
+      </button>
+    </div>
+  </div>
+</div>

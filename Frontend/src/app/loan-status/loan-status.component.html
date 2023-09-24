@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div id="wrapper">
+  <div id="page-content-wrapper">
+    <div class="row my-4">
+      <h2 class="fs-4 mb-3">Check Your Status</h2>
+      <div class="col">
+        <table class="table bg-white rounded shadow-sm table-hover rounded">
+          <thead>
+            <tr>
+              <!-- <th scope="col" width="50">#</th> -->
+              <th scope="col">Email</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Term</th>
+              <th scope="col">Date</th>
+              <th scope="col">status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>{{ loans.email }}</strong>
+              </td>
+              <td>
+                <strong>{{ loans.customerName }}</strong>
+              </td>
+              <td>
+                <strong>{{ loans.amount }}</strong>
+              </td>
+              <td>
+                <strong>{{ loans.term }} Years</strong>
+              </td>
+              <td>
+                <strong>{{ loans.approvalDate }}</strong>
+              </td>
+              <td>
+                <strong style="font-size: large">{{ loans.status }}</strong>
+              </td>
+            </tr>
+            <!-- </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

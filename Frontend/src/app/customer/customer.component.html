@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<body>
+  <section class="container">
+    <header>Loan Application</header>
+
+    <h2>Update Detaile If Required</h2>
+    <form action="#" class="form">
+      <div>
+        <div class="input-box">
+          <label>Loan Term in Years</label>
+          <input
+            matInput
+            [(ngModel)]="loanData.term"
+            name="Term"
+            type="number"
+          />
+        </div>
+      </div>
+
+      <div>
+        <div class="input-box">
+          <label>Loan Amount</label>
+          <input
+            matInput
+            [(ngModel)]="loanData.amount"
+            name="Amount"
+            type="number"
+          />
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label>Full Name</label>
+        <input
+          matInput
+          [(ngModel)]="loanData.customerName"
+          name="customerName"
+          type="text"
+        />
+      </div>
+
+      <div class="input-box">
+        <label>Email Address</label>
+        <input matInput [(ngModel)]="loanData.email" name="email" type="text" />
+      </div>
+
+      <button (click)="appyForLoan()">Submit</button>
+    </form>
+
+    <br />
+    <button>
+      <a
+        style="text-decoration: none; color: black; font-weight: bold"
+        href="loanStatus"
+        >Click here to check Status</a
+      >
+    </button>
+  </section>
+</body>

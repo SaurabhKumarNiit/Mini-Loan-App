@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style="height: 100px">
+    <a class="navbar-brand" routerLink="/home"
+      ><span id="logo">
+        <img src="assets\image\cutlery.gif" alt="" width="70px" /><strong
+          >Mini Loan App</strong
+        ></span
+      >
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="true"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-light" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <button
+            class="btn btn-outline-dark"
+            style="
+              margin-right: 25px;
+              margin-top: 5px;
+              height: 65px;
+              width: 65px;
+            "
+            mat-flat-button
+            routerLink="/home"
+            routerLinkActive="active-link"
+          >
+            <img src="assets\images\home.gif" alt="" width="55px" />
+          </button>
+        </li>
+
+        <li>
+          <button
+            (click)="logOut()"
+            class="btn btn-outline-dark"
+            style="
+              margin-right: 25px;
+              margin-top: 6px;
+              height: 65px;
+              width: 65px;
+            "
+            mat-flat-button
+          >
+            <img src="assets\images\login.gif" alt="" width="55px" />
+            <!-- <mat-icon>login</mat-icon>
+                Login -->
+          </button>
+        </li>
+
+        <li>
+          <span id="cart">
+            <button
+              class="btn btn-outline-dark"
+              routerLink="/loanStatus"
+              style="margin-top: 6px; height: 65px; width: 65px"
+              mat-flat-button
+              class="btn btn-outline-dark"
+            >
+              <img src="assets\images\money.gif" alt="" width="60px" />
+            </button>
+          </span>
+        </li>
+
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</nav>
