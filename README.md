@@ -8,6 +8,10 @@ MiniLoanApp is a web application designed to streamline the process of applying 
 
 The backend of MiniLoanApp uses MySQL as its database. Before running the application, make sure you have MySQL services enabled on your system.
 
+For Admin- you have to post email-admin@gmail.com
+                            password-@Admin123
+                            by using postman one time store to database then admin work.
+
 ### IDE
 You can use any Integrated Development Environment (IDE) of your choice. The README assumes the use of IntelliJ IDEA.
 
